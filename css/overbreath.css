@@ -1,0 +1,178 @@
+body{
+   background-color: rgb(20, 20, 88);
+}
+#overbreath{
+   color: rgb(240,240,240);
+}
+
+#overbreath {
+   margin-bottom: 1em;
+   display: flex;
+   flex-direction: column;
+}
+
+.overbreath:before {
+   width: 100%;
+   position: absolute;
+   left: 0;
+}
+
+@media screen and (min-width:1440px) {
+   #overbreath {
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      flex-direction: row;
+   }
+
+   #overbreath .overbreath::before {
+      width: auto;
+      left: auto;
+   }
+}
+
+#overbreath .overbreath:nth-child(1) .overbreathtext {
+   animation: ke_overbreathtext1 8s infinite;
+   background-image: linear-gradient(60deg, #AE0CA5, #FFD802);
+}
+
+#overbreath .overbreath:nth-child(2) .overbreathtext {
+   animation: 8s ease 0s infinite normal none running ke_overbreathtext2;
+   background-image: linear-gradient(60deg, #1fe173, #582bca);
+}
+
+#overbreath .overbreath:nth-child(3) .overbreathtext {
+   animation: 8s ease 0s infinite normal none running ke_overbreathtext3;
+   background-image: linear-gradient(60deg, #00b4f0, #e614e6);
+}
+
+#overbreath .overbreath {
+   display: block;
+   text-align: center;
+}
+
+#overbreath .overbreathtext,
+#overbreath .overbreath::before {
+   word-spacing: -5px;
+   background-clip: text;
+   -webkit-background-clip: text;
+   line-height: 1;
+   font-weight: 800;
+   letter-spacing: -.06em;
+   font-size: clamp(4.5rem, 10vw, 6rem);
+}
+
+#overbreath .overbreathtext {
+   position: relative;
+   box-sizing: border-box;
+   -webkit-text-fill-color: transparent;
+}
+
+#overbreath .overbreath:nth-child(1)::before {
+   content: "Text I.";
+   animation: ke_overbreath1 8s infinite
+}
+
+#overbreath .overbreath:nth-child(2)::before {
+   content: "Text II..";
+   animation: ke_overbreath2 8s infinite
+}
+
+#overbreath .overbreath:nth-child(3):before {
+   content: "Text III...";
+   animation: ke_overbreath3 8s infinite
+}
+
+@keyframes ke_overbreathtext1 {
+
+   0%,
+   16.667%,
+   to {
+      opacity: 1
+   }
+
+   33.333%,
+   83.333% {
+      opacity: 0
+   }
+}
+
+@keyframes ke_overbreathtext2 {
+
+   0%,
+   to {
+      opacity: 0
+   }
+
+   33.333%,
+   50% {
+      opacity: 1
+   }
+
+   16.667%,
+   66.667% {
+      opacity: 0
+   }
+}
+
+@keyframes ke_overbreathtext3 {
+
+   0%,
+   50%,
+   to {
+      opacity: 0
+   }
+
+   66.667%,
+   83.333% {
+      opacity: 1
+   }
+}
+
+@keyframes ke_overbreath1 {
+
+   0%,
+   16.667%,
+   to {
+      opacity: 0
+   }
+
+   25%,
+   91.667% {
+      opacity: 1
+   }
+}
+
+
+@keyframes ke_overbreath2 {
+
+   0%,
+   to {
+      opacity: 1
+   }
+
+   33.333%,
+   50% {
+      opacity: 0
+   }
+
+   25%,
+   58.333% {
+      opacity: 1
+   }
+}
+
+@keyframes ke_overbreath3 {
+
+   0%,
+   58.333%,
+   91.667%,
+   to {
+      opacity: 1
+   }
+
+   66.667%,
+   83.333% {
+      opacity: 0
+   }
+}
