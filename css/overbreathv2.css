@@ -1,5 +1,10 @@
 body {
-   background-color: rgb(20, 20, 88);
+   background-color: rgb(20, 20, 88)
+}
+hr{
+   border: 0;
+   width: 200px;
+   height: 20px;
 }
 
 #overbreath {
@@ -7,16 +12,19 @@ body {
 }
 
 #overbreath {
-   
    margin-bottom: 1em;
    display: flex;
    flex-direction: column;
+   align-items: center;
+}
+#overbreath .overbreath {
+   display: block;
+   position: relative;
 }
 
-.overbreath:before {
-   width: 100%;
+#overbreath .overbreathroot {
    position: absolute;
-   left: 0;
+   top: 0;
 }
 
 @media screen and (min-width:1440px) {
@@ -27,10 +35,6 @@ body {
       flex-direction: row;
    }
 
-   #overbreath .overbreath::before {
-      width: auto;
-      left: auto;
-   }
 }
 
 #overbreath .overbreath:nth-child(1) .overbreathtext {
@@ -48,16 +52,12 @@ body {
    background-image: linear-gradient(60deg, #00b4f0, #e614e6);
 }
 
-#overbreath .overbreath {
-   display: block;
-   text-align: center;
-}
-
 #overbreath .overbreathtext,
-#overbreath .overbreath::before {
+#overbreath .overbreathroot {
    box-sizing: border-box;
    padding-right: 2.5px;
    letter-spacing: -2.5px;
+   width: fit-content;
    background-clip: text;
    -webkit-background-clip: text;
    line-height: 1;
@@ -65,25 +65,20 @@ body {
    font-size: clamp(4.5rem, 10vw, 6rem);
 }
 
-
 #overbreath .overbreathtext {
-   position: relative;
    box-sizing: border-box;
    -webkit-text-fill-color: transparent;
 }
 
-#overbreath .overbreath:nth-child(1)::before {
-   content: "Text I.";
+#overbreath .overbreath:nth-child(1) .overbreathroot {
    animation: ke_overbreath1 8s infinite
 }
 
-#overbreath .overbreath:nth-child(2)::before {
-   content: "Text II..";
+#overbreath .overbreath:nth-child(2) .overbreathroot {
    animation: ke_overbreath2 8s infinite
 }
 
-#overbreath .overbreath:nth-child(3):before {
-   content: "Text III...";
+#overbreath .overbreath:nth-child(3) .overbreathroot {
    animation: ke_overbreath3 8s infinite
 }
 
@@ -147,7 +142,6 @@ body {
    }
 }
 
-
 @keyframes ke_overbreath2 {
 
    0%,
@@ -178,5 +172,35 @@ body {
    66.667%,
    83.333% {
       opacity: 0
+   }
+}
+
+.overbreathflow {
+   animation: 8s linear infinite breathflow;
+}
+
+
+@keyframes breathflow {
+
+   0%,
+   100% {
+      opacity: 1;
+      background-image: linear-gradient(60deg, #AE0CA5, #FFD802);
+   }
+
+   33.33% {
+      opacity: 1;
+      background-image: linear-gradient(60deg, #1fe173, #582bca);
+   }
+
+   16.66%,
+   50.33%,
+   83% {
+      opacity: 0;
+   }
+
+   66.67% {
+      opacity: 1;
+      background-image: linear-gradient(60deg, #00b4f0, #e614e6);
    }
 }
