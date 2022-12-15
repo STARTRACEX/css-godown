@@ -50,17 +50,16 @@ body{
    display: block;
    text-align: center;
 }
-
 #overbreath .overbreathtext,
 #overbreath .overbreath::before {
-   word-spacing: -5px;
+   word-spacing: 4px;
    background-clip: text;
    -webkit-background-clip: text;
    line-height: 1;
    font-weight: 800;
-   letter-spacing: -.06em;
    font-size: clamp(4.5rem, 10vw, 6rem);
 }
+
 
 #overbreath .overbreathtext {
    position: relative;
