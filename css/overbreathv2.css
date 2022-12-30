@@ -29,11 +29,6 @@ button:hover {
 
 /* --- */
 
-.overbreathflow {
-   height: 100%;
-   width: 100%;
-}
-
 .overbreathbord {
    position: relative;
    width: 120px;
@@ -233,6 +228,8 @@ button:hover {
 
 .overbreathflow {
    animation: 8s linear infinite breathflow;
+   height: 100%;
+   width: 100%;
 }
 
 
