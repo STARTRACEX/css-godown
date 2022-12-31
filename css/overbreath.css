@@ -2,59 +2,59 @@ body {
    background-color: rgb(20, 20, 88);
 }
 
-#overbreath {
+.overbreath {
    color: rgb(240, 240, 240);
 }
 
-#overbreath {
+.overbreath {
    
    margin-bottom: 1em;
    display: flex;
    flex-direction: column;
 }
 
-.overbreath:before {
+.overbreathpart:before {
    width: 100%;
    position: absolute;
    left: 0;
 }
 
 @media screen and (min-width:1440px) {
-   #overbreath {
+   .overbreath {
       width: fit-content;
       margin-left: auto;
       margin-right: auto;
       flex-direction: row;
    }
 
-   #overbreath .overbreath::before {
+   .overbreath .overbreathpart::before {
       width: auto;
       left: auto;
    }
 }
 
-#overbreath .overbreath:nth-child(1) .overbreathtext {
+.overbreath .overbreathpart:nth-child(1) .overbreathtext {
    animation: ke_overbreathtext1 8s infinite;
    background-image: linear-gradient(60deg, #AE0CA5, #FFD802);
 }
 
-#overbreath .overbreath:nth-child(2) .overbreathtext {
+.overbreath .overbreathpart:nth-child(2) .overbreathtext {
    animation: 8s ease 0s infinite normal none running ke_overbreathtext2;
    background-image: linear-gradient(60deg, #1fe173, #582bca);
 }
 
-#overbreath .overbreath:nth-child(3) .overbreathtext {
+.overbreath .overbreathpart:nth-child(3) .overbreathtext {
    animation: 8s ease 0s infinite normal none running ke_overbreathtext3;
    background-image: linear-gradient(60deg, #00b4f0, #e614e6);
 }
 
-#overbreath .overbreath {
+.overbreath .overbreathpart {
    display: block;
    text-align: center;
 }
 
-#overbreath .overbreathtext,
-#overbreath .overbreath::before {
+.overbreath .overbreathtext,
+.overbreath .overbreathpart::before {
    box-sizing: border-box;
    padding-right: 2.5px;
    letter-spacing: -2.5px;
@@ -66,23 +66,23 @@ body {
 }
 
 
-#overbreath .overbreathtext {
+.overbreath .overbreathtext {
    position: relative;
    box-sizing: border-box;
    -webkit-text-fill-color: transparent;
 }
 
-#overbreath .overbreath:nth-child(1)::before {
+.overbreath .overbreathpart:nth-child(1)::before {
    content: "Text I.";
    animation: ke_overbreath1 8s infinite
 }
 
-#overbreath .overbreath:nth-child(2)::before {
+.overbreath .overbreathpart:nth-child(2)::before {
    content: "Text II..";
    animation: ke_overbreath2 8s infinite
 }
 
-#overbreath .overbreath:nth-child(3):before {
+.overbreath .overbreathpart:nth-child(3):before {
    content: "Text III...";
    animation: ke_overbreath3 8s infinite
 }

@@ -12,7 +12,6 @@
    --ov-1: linear-gradient(var(--ov-deg), var(--ov-1-1), var(--ov-1-2));
    --ov-2: linear-gradient(var(--ov-deg), var(--ov-2-1), var(--ov-2-2));
    --ov-3: linear-gradient(var(--ov-deg), var(--ov-3-1), var(--ov-3-2));
-
 }
 
 :where(*) {

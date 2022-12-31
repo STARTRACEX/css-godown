@@ -5,13 +5,19 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>github.io</title>
+   <title>css-godown:startracex.github.io</title>
 </head>
 
 <body>
-   <a href="/css-godown/overbreth.html">Overbreath</a>
-   <a href="/css-godown/overbrethv2.html">Overbreath v2</a>
-
+   <a href="./overbreth.html">Overbreath</a>
+   <a href="./overbrethv2.html">Overbreath v2</a>
+   <script>
+      if (window.location.href == "https://startracex.github.io/css-godown/") {
+         document.querySelectorAll("a").forEach(a => {
+            a.href = "/css-godown" + a.pathname
+         })
+      }
+   </script>
 </body>
 
 </html>
